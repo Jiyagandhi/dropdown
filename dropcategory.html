@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+    text-align: center;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #ff523b;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px
+    rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover
+{background-color: #7effa5;}
+
+.show {display:block;}
+#myDropdown{
+	width: 300px;
+}
+	</style>
+</head>
+<body>
+<div class="dropdown">
+<button onclick="myFunction()"
+ class="dropbtn">Categories</button>
+  <div id="myDropdown"
+  class="dropdown-content">
+    <a href="smartphones.html">Smart Phones</a>
+    <a href="basicmobiles.html">Basic Mobiles</a>
+    <a href="tabletop&traveltripods">Table Top & Travel Tripods</a>
+    <a href="">Mobile Accessories</a>
+    <a href="">Mobile Phone Cases & Covers</a>
+  </div>
+</div>
+<script>
+function myFunction() {
+document.getElementById("myDropdown")
+    .classList.toggle("show");
+}
+
+window.onclick = function(event) {
+if(!event.target.matches('.dropbtn')){
+
+var dropdowns = document
+.getElementsByClassName
+("dropdown-content");
+
+var i;
+for(i=0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+
+if (openDropdown.classList.contains
+('show')) {
+
+openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
